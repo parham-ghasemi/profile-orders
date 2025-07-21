@@ -1,0 +1,61 @@
+@use "./variables.scss" as *;
+
+@mixin center-x {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin center-y {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin section {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: $shadow;
+  padding: 16px;
+}
+
+@mixin form {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: $shadow;
+  padding: 16px;
+  border-right: 4px solid $primary;
+}
+
+@mixin border {
+  border: 1px solid $primary;
+  border-radius: 8px;
+}
+
+@mixin inputBorder {
+  border: 1px solid $light-text;
+  border-radius: 8px;
+}

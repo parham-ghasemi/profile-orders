@@ -1,0 +1,64 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.ins-Progress {
+  width: 300px;
+  height: 100px;
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &__imgContainer {
+    width: 72px;
+    height: 72px;
+    border-radius: 8px;
+    padding: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  &__inactive {
+    background-color: $white;
+
+    .ins-Progress__imgContainer {
+      background-color: $white;
+    }
+
+    .ins-Progress__title {
+      color: $light-text;
+    }
+  }
+
+  &__active {
+    .ins-Progress__imgContainer {
+      background-color: $primary-light;
+    }
+
+    .ins-Progress__title {
+      color: $primary-preMedium;
+    }
+  }
+
+  &__done {
+    .ins-Progress__imgContainer {
+      background-color: $primary;
+    }
+
+    .ins-Progress__title {
+      color: $primary;
+    }
+  }
+}
+
+.ins-Progress-vector {
+  margin-right: 50px;
+}

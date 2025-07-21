@@ -1,0 +1,90 @@
+@import "../../../styles/index.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.ins-button {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  p{
+    @include flex;
+    gap: 8px;
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border: 1px solid $primary;
+
+    .ins-button__text {
+      color: $primary;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: darken($primary, 15%);
+      }
+    }
+
+    &:hover {
+      border-color: darken($primary, 15%);
+    }
+  }
+
+  &.filled {
+    border: 1px solid transparent;
+    background-color: $primary;
+
+    .ins-button__text {
+      color: $white;
+    }
+
+    &:hover:has(.ins-button__text) {
+      background-color: darken($primary, 15%);
+    }
+  }
+
+  &.dark-outlined {
+    background-color: transparent;
+    border: 1px solid $text;
+
+    .ins-button__text {
+      color: $text;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: darken($text, 15%);
+      }
+    }
+
+    &:hover {
+      border-color: darken($text, 15%);
+    }
+  }
+
+  &.darkText-outlined {
+    background-color: transparent;
+    border: 1px solid $primary;
+
+    .ins-button__text {
+      color: $text;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: darken($text, 15%);
+      }
+    }
+
+    &:hover {
+      border-color: darken($primary, 15%);
+    }
+  }
+}

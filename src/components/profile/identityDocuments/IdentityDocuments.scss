@@ -1,0 +1,19 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.ins-identity-docs {
+  @include col;
+  gap: 32px;
+  justify-content: space-between;
+
+  &__inputWrapper {
+    @include col;
+    gap: 32px;
+  }
+
+  &__btn-row {
+    display: flex;
+    align-self: end;
+    gap: 8px;
+  }
+}

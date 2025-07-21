@@ -1,0 +1,26 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.ins-profile {
+  @include col;
+  gap: 24px;
+
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    @include section;
+
+    &__progress {
+      @include col;
+      width: fit-content;
+    }
+
+    &__content {
+      width: 100%;
+      padding: 24px;
+      border-radius: 8px;
+      border: 1px solid $primary-light-border;
+      height: fit-content;
+    }
+  }
+}

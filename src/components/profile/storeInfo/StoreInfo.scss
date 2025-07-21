@@ -1,0 +1,24 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.ins-store-info {
+  @include col;
+  gap: 32px;
+  justify-content: space-between;
+
+  &__inputWrapper {
+    @include col;
+
+    &__row {
+      display: flex;
+      gap: 64px;
+      overflow: visible;
+      align-items: flex-start;
+    }
+  }
+  &__btn-row {
+    display: flex;
+    align-self: end;
+    gap: 8px;
+  }
+}

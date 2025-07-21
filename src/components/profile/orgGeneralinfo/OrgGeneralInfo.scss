@@ -1,0 +1,23 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.ins-org-general-info {
+  @include col;
+  gap: 32px;
+  justify-content: space-between;
+
+  &__inputWrapper {
+    @include col;
+    
+    &__row {
+      display: flex;
+      gap: 64px;
+      overflow: visible;
+      align-items: flex-start;
+    }
+  }
+  &__btnNext {
+    display: flex;
+    align-self: end;
+  }
+}

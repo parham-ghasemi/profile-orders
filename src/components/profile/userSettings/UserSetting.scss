@@ -1,0 +1,32 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.ins-user-settings {
+  @include col;
+  gap: 32px;
+
+  &__phone-number-container {
+    @include flex;
+    gap: 8px;
+
+    &__input {
+      @include col;
+      gap: 4px;
+
+      &__desc {
+        font-size: 10px;
+        font-weight: 400;
+        color: $medium-text;
+      }
+    }
+  }
+  &__password-container {
+    @include col;
+    gap: 32px;
+  }
+  &__btn-row {
+    display: flex;
+    align-self: end;
+    gap: 8px;
+  }
+}

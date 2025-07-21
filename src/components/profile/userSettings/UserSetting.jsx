@@ -1,8 +1,17 @@
+import { useModal } from "../../../contexts/ModalContext";
 import Button from "../../ui/Button/Button";
 import Input from "../../ui/Input/Input";
+import OTPModal from "./otpModal/OTPModal";
 import "./UserSetting.scss";
 
 const UserSettings = () => {
+  const { openModal } = useModal();
+  const handleOpenModal = () => {
+    openModal(<OTPModal />, {
+      cross: false,
+      withBorder: false,
+    });
+  };
   return (
     <form className="ins-user-settings">
       <div className="ins-user-settings__phone-number-container">
@@ -17,7 +26,9 @@ const UserSettings = () => {
             برای تغییر رمز عبور ابتدا شماره تلفن را تایید کنید
           </p>
         </div>
-        <Button type="filled">دریافت کد تایید</Button>
+        <Button type="filled" onClick={handleOpenModal}>
+          دریافت کد تایید
+        </Button>
       </div>
       <div className="ins-user-settings__password-container">
         <Input

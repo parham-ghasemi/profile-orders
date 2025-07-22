@@ -1,0 +1,13 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.ins-orders {
+  @include col;
+  gap: 32px;
+
+  &__cards-row {
+    @include flex;
+    flex-grow: 0;
+    justify-content: space-between;
+  }
+}

@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 import { ModalProvider } from "./contexts/ModalContext";
 
 import Profile from "./components/profile/Profile";
+import Orders from "./components/orders/Orders";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               <Route path="customers" element={<Customers />} />
               <Route path="chats" element={<Chats />} /> */}
               <Route path="profile" element={<Profile />} />
+              <Route path="orders" element={<Orders />} />
               {/* <Route path="subscription" element={<Subscription />} /> */}
               {/* <Route path="notifications" element={<NotificationPage />} /> */}
             </Route>

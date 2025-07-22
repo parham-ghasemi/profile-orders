@@ -10,6 +10,10 @@ function BreadCrumb({ icon, variant }) {
     breadCrumb.push("خانه");
   }
 
+  if (location.pathname === "/insurance/orders") {
+    breadCrumb.push("سفارش‌ها");
+  }
+
   if (location.pathname === "/insurance/complaints") {
     breadCrumb.push("شکایات");
   }

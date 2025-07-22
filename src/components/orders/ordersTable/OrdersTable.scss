@@ -1,0 +1,36 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.ins-orders-table {
+  &__status {
+    font-weight: 400;
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 16px;
+
+    &--reviewing {
+      color: $medium-text;
+      border: 1px solid $medium-text;
+    }
+    &--preparing {
+      background-color: $primary-very-light;
+      color: $medium-text;
+    }
+    &--delivering {
+      border: 1px solid $primary;
+      color: $primary;
+    }
+    &--sent {
+      background-color: $primary;
+      color: $white;
+    }
+    &--returned {
+      background-color: #9EA5B5;
+      color: $white;
+    }
+    &--cancelled {
+      background-color: #FFBFBA;
+      color: #8C1B12;
+    }
+  }
+}

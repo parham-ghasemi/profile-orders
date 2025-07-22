@@ -1,7 +1,7 @@
 @import "../../../styles/mixins.scss";
 @import "../../../styles/variables.scss";
 
-.ins-table {
+.vira-store-table {
   width: 100%;
 
   table {
@@ -18,7 +18,7 @@
     thead {
       font-size: 14px;
       color: $white;
-      background-color: $tbl;
+      background-color: #9ec2f9;
 
       td {
         padding: 8px 0;
@@ -27,14 +27,13 @@
 
     tbody {
       border-radius: 8px;
-      background-color: $white;
+      background-color: #f5f8ff;
 
       td {
         color: $text;
         padding: 8px 0;
         font-size: 14px;
         text-align: center;
-        border: 0.5px solid $tbl;
         justify-items: center;
 
         a {

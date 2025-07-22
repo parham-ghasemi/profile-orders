@@ -2,7 +2,7 @@ import "./Table.scss";
 
 const Table = ({ headers = [], data = [], renderCell }) => {
   return (
-    <div className="ins-table">
+    <div className="vira-store-table">
       <table>
         <thead>
           <tr>

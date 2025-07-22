@@ -1,10 +1,11 @@
 import { useState } from "react";
 import BreadCrumb from "../ui/BreadCrumb/BreadCrumb";
-import Card from "../ui/statusCard/StatusCard";
+import StatusCard from "./statusCard/StatusCard";
 import "./Orders.scss";
 import SearchBar from "./searchBar/SearchBar";
-import { cards } from "./odersData";
+import { cards, tableData } from "./odersData";
 import TableTabs from "./tableTabs/TableTabs";
+import OrdersTable from "./ordersTable/OrdersTable";
 
 const Orders = () => {
   const [tableSearch, SettableSearch] = useState("");
@@ -16,7 +17,7 @@ const Orders = () => {
 
       <div className="ins-orders__cards-row">
         {cards.map((item, index) => (
-          <Card
+          <StatusCard
             title={item.title}
             content={item.content}
             status={item.status}
@@ -36,6 +37,7 @@ const Orders = () => {
             acitveTab={activeTableTab}
             setActiveTab={setActiveTableTab}
           />
+          <OrdersTable tableData={tableData}/>
         </div>
       </div>
     </div>

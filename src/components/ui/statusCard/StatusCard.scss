@@ -4,7 +4,6 @@
 .status-card-container {
   @include flex;
   @include section;
-  width: 362px;
   height: 123px;
 
   &__img {

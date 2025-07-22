@@ -1,0 +1,14 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.ins-orders-searchBar {
+  @include flex;
+  @include section;
+  width: 532px;
+
+  input, input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: $medium-text;
+  }
+}

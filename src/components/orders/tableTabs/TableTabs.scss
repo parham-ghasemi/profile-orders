@@ -1,0 +1,41 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.ins-orders-tableTabs {
+  @include flex;
+  gap: 8px;
+
+  &__tab {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px;
+    color: $text;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      background-color: transparent;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: background-color ease-out 200ms, bottom ease-out 100ms;
+    }
+
+    &--active::after {
+      height: 3px;
+      bottom: 8px;
+      background-color: $primary-medium;
+    }
+    &:hover::after {
+      height: 3px;
+      bottom: 8px;
+      background-color: lighten($color: $primary-medium, $amount: 10%);
+    }
+    &--active:hover::after {
+      background-color: darken($color: $primary-medium, $amount: 10%);
+    }
+  }
+}

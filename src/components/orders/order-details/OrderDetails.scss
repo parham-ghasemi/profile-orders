@@ -4,40 +4,39 @@
 .orderDetails-container {
   @include col;
   gap: 32px;
+
   &__cards-container {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 16px;
+    &__top {
+      @include flex;
+      gap: 16px;
+      width: 100%;
 
-    &__summary-card {
-      grid-column: span 3 / span 3;
-      @include section;
-      border: 1px solid $primary-very-light;
-    }
+      &__left {
+        width: 477px;
+        &__customer {
+          @include section;
+          border: 1px solid $primary-very-light;
+        }
+      }
 
-    &__info-card {
-      grid-column: span 3 / span 3;
-      grid-column-start: 1;
-      grid-row-start: 2;
-      @include section;
-      border: 1px solid $primary-very-light;
-    }
+      &__right {
+        @include col;
+        gap: 16px;
+        flex: 1;
+        &__summary-card {
+          @include section;
+          border: 1px solid $primary-very-light;
+        }
 
-    &__customer {
-      grid-column: span 2 / span 2;
-      grid-row: span 2 / span 2;
-      grid-column-start: 4;
-      grid-row-start: 1;
-      @include section;
-      border: 1px solid $primary-very-light;
+        &__info-card {
+          @include section;
+          border: 1px solid $primary-very-light;
+        }
+      }
     }
 
     &__item {
-      grid-column: span 5 / span 5;
-      grid-row: span 2 / span 2;
-      grid-row-start: 3;
       @include section;
       border: 1px solid $primary-very-light;
     }

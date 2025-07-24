@@ -4,6 +4,7 @@
 .ins-products-item-container {
   @include flex;
   justify-content: space-between;
+  padding-left: 21px;
 
   &__right {
     @include flex;

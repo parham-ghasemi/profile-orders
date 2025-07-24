@@ -38,7 +38,15 @@
 
     &__items {
       @include section;
+      @include col;
       border: 1px solid $primary-very-light;
+      gap: 16px;
+
+      &__title {
+        font-size: 16px;
+        font-weight: 700;
+        color: $primary;
+      }
     }
   }
 }

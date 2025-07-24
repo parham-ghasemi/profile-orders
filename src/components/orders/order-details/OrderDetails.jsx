@@ -49,6 +49,7 @@ const OrderDetails = () => {
       </div>
 
       <div className="orderDetails-container__cards-container__items">
+      <h3 className="orderDetails-container__cards-container__items__title">لیست محصولات</h3>
         {orderData.products.map((product, index) => (
           <ProductsCard
             key={`${product.name}-${index}`}

@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
 import "./OrderDetails.scss";
 import BreadCrumb from "../../ui/BreadCrumb/BreadCrumb";
-import SummaryCard from './summaryCard/SummaryCard'
+import SummaryCard from "./summaryCard/SummaryCard";
 import { orderData } from "./OrderData";
+import InfoCard from "./infoCard/InfoCard";
 
 const OrderDetails = () => {
   const id = useParams().id;
@@ -13,10 +14,18 @@ const OrderDetails = () => {
 
       <div className="orderDetails-container__cards-container">
         <div className="orderDetails-container__cards-container__summary-card">
-          <SummaryCard id={id} date={orderData.date} status={orderData.status}/>
+          <SummaryCard
+            id={id}
+            date={orderData.date}
+            status={orderData.status}
+          />
         </div>
         <div className="orderDetails-container__cards-container__info-card">
-          k
+          <InfoCard
+            prodSumPrice={orderData.productSumPrice}
+            shippingPrice={orderData.shippingPrice}
+            priceSum={orderData.fullPrice}
+          />
         </div>
         <div className="orderDetails-container__cards-container__customer">
           k

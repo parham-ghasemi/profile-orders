@@ -1,0 +1,42 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/variables.scss";
+
+.ins-info-card-container {
+  @include col;
+  gap: 16px;
+  position: relative;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: $primary;
+  }
+
+  &__item {
+    font-size: 14px;
+    font-weight: 700;
+    @include flex;
+    gap: 5px;
+    span {
+      color: $medium-text;
+      font-weight: 500;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: fit-content;
+    padding: 8px 16px;
+    outline: 1px solid $primary;
+    border-radius: 8px;
+    color: $primary;
+    cursor: pointer;
+    transition: filter 150ms ease-in-out;
+
+    &:hover {
+      filter: brightness(85%);
+    }
+  }
+}

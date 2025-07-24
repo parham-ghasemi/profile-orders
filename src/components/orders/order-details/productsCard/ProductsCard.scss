@@ -1,0 +1,63 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/variables.scss";
+
+.ins-products-item-container {
+  @include flex;
+  justify-content: space-between;
+
+  &__right {
+    @include flex;
+    gap: 16px;
+
+    &__img{
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid $primary-very-light;
+      width: 77px;
+      height: 77px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__name-desc{
+      @include col;
+      gap: 16px;
+
+      &__name{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 100%;
+      }
+
+      &__desc{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 100%;
+      }
+    }
+  }
+
+  &__left {
+    @include flex;
+    width: 458px;
+    justify-content: space-between;
+
+    &__item {
+      @include col;
+      gap: 16px;
+      &__title {
+        font-size: 14px;
+        font-weight: 700;
+      }
+      &__value {
+        font-size: 14px;
+        font-weight: 700;
+        color: $medium-text;
+      }
+    }
+  }
+}

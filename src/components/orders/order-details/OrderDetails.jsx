@@ -5,6 +5,7 @@ import SummaryCard from "./summaryCard/SummaryCard";
 import { orderData } from "./OrderData";
 import InfoCard from "./infoCard/InfoCard";
 import CustomerCard from "./customerCard/CustomerCard";
+import ProductsCard from "./productsCard/ProductsCard";
 
 const OrderDetails = () => {
   const id = useParams().id;
@@ -47,7 +48,19 @@ const OrderDetails = () => {
         </div>
       </div>
 
-      <div className="orderDetails-container__cards-container__item">k</div>
+      <div className="orderDetails-container__cards-container__items">
+        {orderData.products.map((product, index) => (
+          <ProductsCard
+            key={`${product.name}-${index}`}
+            name={product.name}
+            details={product.details}
+            price={product.price}
+            number={product.number}
+            priceSum={product.priceSum}
+            img={product.img}
+          />
+        ))}
+      </div>
     </div>
   );
 };

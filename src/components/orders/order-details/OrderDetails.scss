@@ -36,7 +36,7 @@
       }
     }
 
-    &__item {
+    &__items {
       @include section;
       border: 1px solid $primary-very-light;
     }

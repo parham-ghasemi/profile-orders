@@ -3,7 +3,7 @@ import BreadCrumb from "../ui/BreadCrumb/BreadCrumb";
 import StatusCard from "./statusCard/StatusCard";
 import "./Orders.scss";
 import SearchBar from "./searchBar/SearchBar";
-import { cards, tableData } from "./odersData";
+import { cards, tableData } from "./ordersData.jsx";
 import TableTabs from "./tableTabs/TableTabs";
 import OrdersTable from "./ordersTable/OrdersTable";
 

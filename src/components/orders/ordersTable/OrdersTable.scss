@@ -33,4 +33,12 @@
       color: #8C1B12;
     }
   }
+
+  &__more-icon {
+    cursor: pointer;
+    transition: opacity ease 150ms;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }

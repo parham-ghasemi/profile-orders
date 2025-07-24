@@ -1,0 +1,57 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/variables.scss";
+
+.ins-summary-card-container {
+  @include col;
+  gap: 16px;
+  position: relative;
+
+  &__order-id {
+    font-weight: 700;
+    font-size: 18px;
+    color: $primary;
+  }
+  &__order-date {
+    font-weight: 700;
+    font-size: 16px;
+    @include flex;
+    gap: 5px;
+
+    span {
+      color: $medium-text;
+    }
+  }
+  &__status {
+    position: absolute;
+    left: 0;
+    border-radius: 16px;
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: 400;
+
+    &--reviewing {
+      color: $medium-text;
+      border: 1px solid $medium-text;
+    }
+    &--preparing {
+      background-color: $primary-very-light;
+      color: $medium-text;
+    }
+    &--delivering {
+      border: 1px solid $primary;
+      color: $primary;
+    }
+    &--sent {
+      background-color: $primary;
+      color: $white;
+    }
+    &--returned {
+      background-color: #9ea5b5;
+      color: $white;
+    }
+    &--cancelled {
+      background-color: #ffbfba;
+      color: #8c1b12;
+    }
+  }
+}

@@ -1,7 +1,11 @@
-import Table from "../../ui/Table/Table";
 import "./OrdersTable.scss";
+import Table from "../../ui/Table/Table";
+import { useNavigate } from "react-router-dom";
+
 
 const OrdersTable = ({ tableData }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="ins-orders-table">
       <Table
@@ -26,6 +30,17 @@ const OrdersTable = ({ tableData }) => {
               >
                 {value}
               </p>
+            );
+          }
+
+          if (key === "details" && value === "more") {
+            return (
+              <img
+                src="assets/orders/more.svg"
+                alt="جزئیات"
+                className="ins-orders-table__more-icon"
+                onClick={() => navigate(`details/${row.id}`)}
+              />
             );
           }
 

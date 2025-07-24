@@ -10,10 +10,6 @@ function BreadCrumb({ icon, variant }) {
     breadCrumb.push("خانه");
   }
 
-  if (location.pathname === "/insurance/orders") {
-    breadCrumb.push("سفارش‌ها");
-  }
-
   if (location.pathname === "/insurance/complaints") {
     breadCrumb.push("شکایات");
   }
@@ -66,6 +62,13 @@ function BreadCrumb({ icon, variant }) {
 
   if (location.pathname === "/insurance/notifications") {
     breadCrumb.push("اعلانات");
+  }
+
+  if (location.pathname.startsWith("/insurance/orders")) {
+    breadCrumb.push("سفارش‌ها");
+    if (variant === "detailed") {
+      breadCrumb.push("جزئیات سفارش");
+    }
   }
 
   return (

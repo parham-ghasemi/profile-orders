@@ -8,6 +8,7 @@ import { ModalProvider } from "./contexts/ModalContext";
 
 import Profile from "./components/profile/Profile";
 import Orders from "./components/orders/Orders";
+import OrderDetails from "./components/orders/order-details/OrderDetails";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               <Route path="chats" element={<Chats />} /> */}
               <Route path="profile" element={<Profile />} />
               <Route path="orders" element={<Orders />} />
+              <Route path="orders/details/:id" element={<OrderDetails />} />
               {/* <Route path="subscription" element={<Subscription />} /> */}
               {/* <Route path="notifications" element={<NotificationPage />} /> */}
             </Route>

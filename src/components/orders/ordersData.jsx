@@ -26,14 +26,14 @@ export const cards = [
 ];
 
 export const tabs = [
-  'همه',
-  'در حال بررسی',
-  'در حال آماده سازی',
-  'تحویل به پیک',
-  'ارسال شده',
-  'لغو شده',
-  'مرجوع  شده'
-]
+  "همه",
+  "در حال بررسی",
+  "در حال آماده سازی",
+  "تحویل به پیک",
+  "ارسال شده",
+  "لغو شده",
+  "مرجوع  شده",
+];
 
 export const tableData = {
   headers: [
@@ -53,7 +53,7 @@ export const tableData = {
       status: "در حال بررسی",
       quantity: "2",
       location: "تهران",
-      details: "...",
+      details: "more",
     },
     {
       id: "5589693662",
@@ -62,7 +62,7 @@ export const tableData = {
       status: "در حال آماده سازی",
       quantity: "4",
       location: "شیراز",
-      details: "...",
+      details: "more",
     },
     {
       id: "5589693663",
@@ -71,7 +71,7 @@ export const tableData = {
       status: "تحویل به پیک",
       quantity: "1",
       location: "مشهد",
-      details: "...",
+      details: "more",
     },
     {
       id: "5589693664",
@@ -80,7 +80,7 @@ export const tableData = {
       status: "ارسال شده",
       quantity: "5",
       location: "اصفهان",
-      details: "...",
+      details: "more",
     },
     {
       id: "5589693665",
@@ -89,7 +89,7 @@ export const tableData = {
       status: "مرجوع شده",
       quantity: "2",
       location: "تبریز",
-      details: "...",
+      details: "more",
     },
     {
       id: "5589693666",
@@ -98,8 +98,7 @@ export const tableData = {
       status: "لغو شده",
       quantity: "3",
       location: "کرج",
-      details: "...",
+      details: "more",
     },
   ],
 };
-

@@ -1,4 +1,4 @@
-import { tabs } from "../odersData";
+import { tabs } from "../ordersData.jsx";
 import "./TableTabs.scss";
 
 const TableTabs = ({ acitveTab, setActiveTab }) => {

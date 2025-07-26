@@ -13,6 +13,7 @@ const Layout = () => {
           </div>
           <div className="ins-panel-layout__body__content">
             <Outlet />
+            <Sidebar />
           </div>
         </div>
       </div>

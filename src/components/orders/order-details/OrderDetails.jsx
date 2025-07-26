@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import "./OrderDetails.scss";
 import BreadCrumb from "../../ui/BreadCrumb/BreadCrumb";
 import SummaryCard from "./summaryCard/SummaryCard";
-import { orderData } from "./OrderData";
+import { orderData } from "../ordersData";
 import InfoCard from "./infoCard/InfoCard";
 import CustomerCard from "./customerCard/CustomerCard";
 import ProductsCard from "./productsCard/ProductsCard";

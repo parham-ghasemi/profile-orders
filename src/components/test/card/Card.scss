@@ -1,0 +1,52 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.card-container {
+  @include section;
+  width: 246px;
+  height: 157px;
+  border-radius: 16px;
+  padding: 15px;
+  @include flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  &__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    z-index: 0;
+    opacity: 10%;
+  }
+
+  &__left {
+    height: 80px;
+    z-index: 1;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__right {
+    z-index: 1;
+    @include col;
+    align-items: center;
+    &__top {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    &__bottom {
+      font-size: 18px;
+      font-weight: 500;
+      color: $primary;
+    }
+  }
+}
